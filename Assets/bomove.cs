@@ -26,10 +26,10 @@ public class bomove : MonoBehaviour
             nextFire = Time.time + fireRate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
         }
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxis("Vertical");
+        float moveVertical = Input.GetAxis("Horizontal");
 
-        Vector3 movement = new Vector3(moveVertical, 0.0f, moveHorizontal);
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rigidbody.velocity = movement * speed;
 
 
